@@ -43,8 +43,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
-    height: 19px;
+    min-width: 1.5rem;
+    height: 1.25rem;
     background: var(--gray-400);
     border-radius: 10px;
 }
