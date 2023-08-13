@@ -1,5 +1,6 @@
 import { EmptyTask } from './EmptyTasks'
 import styles from './ListTask.module.css'
+import { Card } from './Card'
 
 export interface Task{
     id:string
@@ -7,20 +8,40 @@ export interface Task{
     isComplete: boolean
 }
 
-const tasks:Task[] = []
+interface ListTaskProps{
+    tasks: Task[]
+    handleDeleteTask: (task: Task) => void
+    handlechangeChecked: (task: Task) => void
+}
 
-export function ListTask(){
-
-    const hasTask = tasks.length > 0
+export function ListTask({ tasks, handleDeleteTask, handlechangeChecked }:ListTaskProps){
 
     function generateTasks(){
         if(hasTask){
             return tasks.map(task => {
-                return <div key={task.id}>Task</div>
+                return (
+                    <Card 
+                        key={task.id} 
+                        task={task}
+                        handleDeleteTask={handleDeleteTask}
+                        handlechangeChecked={handlechangeChecked}
+                    />
+                )
             })
         }
         return <EmptyTask />
     }
+
+    function generateCounter(){
+        if(totalTasks > 0){
+            return <p>{tasksCheckeds} de {totalTasks}</p>
+        }
+        return <p>{tasksCheckeds}</p>
+    }
+
+    const totalTasks = tasks.length
+    const hasTask = totalTasks > 0
+    const tasksCheckeds = tasks.filter(task => task.isComplete).length
 
     return (
         <div className={styles.wrapper}>
@@ -29,13 +50,13 @@ export function ListTask(){
                     <div className={styles.createdTasks}>
                         <p>Tarefas criadas</p>
                         <div className={styles.counter}>
-                            <p>0</p>
+                            <p>{totalTasks}</p>
                         </div>
                     </div>
                     <div className={styles.completedTasks}>
                         <p>Concluídas</p>
                         <div className={styles.counter}>
-                            <p>0</p>
+                            <p>{generateCounter()}</p>
                         </div>
                     </div>
                 </header>
