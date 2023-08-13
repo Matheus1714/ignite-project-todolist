@@ -1,6 +1,6 @@
 import styles from './EmptyTasks.module.css'
 // import { Clipboard } from '@phosphor-icons/react'
-import clipboard from '../assets/Clipboard.svg'
+import clipboard from '../assets/clipboard.svg'
 
 export function EmptyTask(){
     return (
