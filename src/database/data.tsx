@@ -1,8 +1,4 @@
-interface Task{
-    id:string
-    content: string,
-    isComplete: boolean
-}
+import { Task } from "../components/ListTask"
 
 export const data:Task[] = [
     {
