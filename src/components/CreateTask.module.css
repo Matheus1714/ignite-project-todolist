@@ -1,13 +1,19 @@
-.createTask{
+.wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+}
+
+.createTask{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 46rem;
     margin-top: calc(0px - 1.6875rem);
 }
 
 .createTask input[type=text]{
-    width: 38.875rem;
+    width: 39.875rem;
     padding: 1rem 1rem;
     color: var(--gray-100);
     background:var(--gray-500);
