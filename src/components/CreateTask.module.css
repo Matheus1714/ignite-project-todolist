@@ -1,3 +1,58 @@
 .createTask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: calc(0px - 1.6875rem);
+}
 
+.createTask input[type=text]{
+    width: 38.875rem;
+    padding: 1rem 1rem;
+    color: var(--gray-100);
+    background:var(--gray-500);
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    opacity: 0.5;
+    outline: none;
+    line-height: 0;
+    font-weight: 400;
+}
+
+.createTask input[type=text]::placeholder{
+    color: var(--gray-300);
+}
+
+.createTask button[type=submit]{
+    min-width: 5.625rem;
+    height: 3.25rem;
+    background: var(--blue-dark);
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.50rem;
+    transition: background-color 0.5s;
+}
+
+.createTask button[type=submit]::after{
+    padding: 0 0.5rem;
+}
+
+.createTask button[type=submit]:hover{
+    background: var(--blue);
+}
+
+.createTask button[type=submit]:active{
+    background: var(--blue);
+    opacity: 0.5;
 }
