@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, InvalidEvent, useState, useEffect } from 'react'
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { CreateTask } from './components/CreateTask'
 import { Header } from './components/Header'
