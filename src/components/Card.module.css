@@ -1,0 +1,99 @@
+.card{
+    width: 100%;
+    min-height: 4.5rem;
+    padding: 1rem;
+    background: var(--gray-500);
+    border-radius: 8px;
+    border: 1px solid var(--gray-400);
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.card + .card{
+    margin-top: 0.75rem;
+}
+
+.taskContent{
+    width: 100%;
+}
+
+.taskContent p{
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    padding: 0 0.75rem;
+}
+
+.deleteTask{
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    margin-left: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.deleteTask:hover{
+    background: var(--gray-400);
+}
+
+.deleteTask:hover svg:hover{
+    color: var(--danger);
+}
+
+.deleteTask:active{
+    background: var(--gray-400);
+    opacity: 0.5;
+}
+
+.deleteTask:active svg:active{
+    color: var(--danger);
+    opacity: 0.5;
+}
+
+.deleteTask svg{
+    color: var(--gray-300);
+}
+
+.checkbox{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.checkbox input[type=radio]{
+    width: calc(1.5rem - 2px);
+    height: calc(1.5rem - 2px);
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    /* padding: 1rem; */
+    appearance: none;
+    /* margin-right: 0.75rem; */
+    cursor: pointer;
+    content: '';
+}
+.checkbox input[type=radio]:checked{
+    background: var(--purple-dark);
+    /* cursor: not-allowed; */
+    border:none;
+    line-height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox input[type=radio]:checked::before{
+    content: "\2713";
+    color: var(--gray-100);
+    font-weight: bold;
+}
+
+.checkedTask {
+    text-decoration: line-through;
+}
