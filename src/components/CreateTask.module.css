@@ -62,3 +62,16 @@
     background: var(--blue);
     opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+    .createTask input[type=text]{
+        width: 100%;
+    }
+    .createTask{
+        display: block;
+    }
+    .createTask button[type=submit]{
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}

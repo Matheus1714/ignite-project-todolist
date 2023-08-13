@@ -1,5 +1,9 @@
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main{
+
+}
+
+@media (max-width: 768px) {
+    .main{
+        margin: 0 1rem;
+    }
 }

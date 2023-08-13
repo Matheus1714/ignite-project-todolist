@@ -10,11 +10,11 @@ export interface Task{
 
 interface ListTaskProps{
     tasks: Task[]
-    handleDeleteTask: (task: Task) => void
-    handlechangeChecked: (task: Task) => void
+    onDeleteTask: (task: Task) => void
+    onChangeChecked: (task: Task) => void
 }
 
-export function ListTask({ tasks, handleDeleteTask, handlechangeChecked }:ListTaskProps){
+export function ListTask({ tasks, onDeleteTask, onChangeChecked }:ListTaskProps){
 
     function generateTasks(){
         if(hasTask){
@@ -23,8 +23,8 @@ export function ListTask({ tasks, handleDeleteTask, handlechangeChecked }:ListTa
                     <Card 
                         key={task.id} 
                         task={task}
-                        handleDeleteTask={handleDeleteTask}
-                        handlechangeChecked={handlechangeChecked}
+                        onDeleteTask={onDeleteTask}
+                        onChangeChecked={onChangeChecked}
                     />
                 )
             })
@@ -56,7 +56,7 @@ export function ListTask({ tasks, handleDeleteTask, handlechangeChecked }:ListTa
                     <div className={styles.completedTasks}>
                         <p>Concluídas</p>
                         <div className={styles.counter}>
-                            <p>{generateCounter()}</p>
+                            {generateCounter()}
                         </div>
                     </div>
                 </header>

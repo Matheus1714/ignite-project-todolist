@@ -26,5 +26,4 @@
 body{
     background: var(--gray-600);
     -webkit-font-smoothing: antialiased;
-    color: var(--gray-100);
 }
