@@ -1,0 +1,27 @@
+.emptyTasks{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emptyTasks img{
+    width: 3.5rem;
+}
+
+.emptyTasks img{
+    margin-bottom:1rem;
+    color: var(--gray-300);
+}
+
+.emptyTasks strong{
+    color: var(--gray-300);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.emptyTasks p{
+    color: var(--gray-300);
+    font-weight: 400;
+    font-size: 1rem;
+}
